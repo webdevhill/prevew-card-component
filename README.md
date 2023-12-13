@@ -39,4 +39,4 @@ Users should be able to:
 ## Author
 
 - Website - [Jeff Hill](https://jeffhill.io/)
-- Frontend Mentor - [@webdevhill](https://www.frontendmentor.io/profile/webdevhill)
+- Frontend Mentor - [@webdevhill](https://github.com/webdevhill/stats-preview-card-component)
