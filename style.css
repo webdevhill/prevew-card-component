@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root {
+    /* ### Primary */
+    --soft-violet:hsl(277, 64%, 61%); /*(accent)*/
+    --very-dark-blue:hsl(233, 47%, 7%); /*(main background)*/
+    --dark-desaturated-blue:hsl(244, 38%, 16%); /*(card background)*/
+
+    /* ### Neutral */
+    --white: hsl(0, 0%, 100%); /*(main heading, stats) */
+    --slightly-transparent-white:hsla(0, 0%, 100%, 0.75); /*(main paragraph)*/
+    --slightly-transparent-white:hsla(0, 0%, 100%, 0.6); /*(stat headings)*/
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9375rem;
+    background-color: var(--very-dark-blue);
+    color: var(--white);
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1080px;
+    height: 446px;
+    background-color: var(--dark-desaturated-blue);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.body_card {
+    width: 50%;
+    padding-left: 4rem;
+}
+
+.body_card h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.25rem;
+    font-weight: bold;
+    line-height: 1.2;
+    width: 80%;
+    margin-bottom: 1.5rem;
+}
+
+.body_card p {
+    color: var(--slightly-transparent-white);
+    font-family: 'Inter', sans-serif;
+    width: 75%;
+    line-height: 1.6;
+    margin-bottom: 4rem;
+}
+
+.body_card span {
+    color: var(--soft-violet);
+}
+
+.stats {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.stats h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.stats h4 {
+    color: var(--slightly-transparent-white);
+    font-family: 'Lexa Deca', sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+.img_card {
+    width: 50%;
+    height: 446px;
+    background: url(./images/image-header-desktop.jpg),hsla(277, 64%, 61%, 0.8);
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+@media only screen and (max-width: 1000px)  {
+    .card_container {
+        width: 90%;
+        height: auto;
+        margin: auto;
+        flex-direction: column-reverse;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    .img_card {
+        width: 100%;
+        height: 240px;
+        background: url(./images/image-header-mobile.jpg),hsla(277, 64%, 61%, 0.8)no-repeat center center/cover;
+        background-size: cover;
+        background-blend-mode: multiply;
+    }
+
+    .body_card {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-left: 0rem;
+        margin-top: 1.5rem;
+    }
+
+    .body_card h1 {
+        font-size: 2rem;
+        width: 90%;
+    }
+
+    .body_card p {
+        width: 80%;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+    }
+
+    .stats {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+}
